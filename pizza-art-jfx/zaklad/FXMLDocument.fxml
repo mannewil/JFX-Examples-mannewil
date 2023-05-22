@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zaklad.FXMLDocumentController">
+   <center>
+      <StackPane fx:id="paneCanvas" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="200.0" minWidth="200.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: beige;" translateX="1.0" translateY="1.0" translateZ="1.0" BorderPane.alignment="CENTER">
+         <children>
+            <Canvas fx:id="canvas" onMouseClicked="#onCanvasClick" onMouseDragged="#onCanvasDragClick" translateX="1.0" translateY="1.0" translateZ="1.0" />
+         </children>
+      </StackPane>
+   </center>
+   <left>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgray;">
+         <children>
+            <Button fx:id="btnAddIngredient" layoutX="32.0" layoutY="526.0" mnemonicParsing="false" onAction="#onBtnAddIngredient" prefHeight="53.0" prefWidth="208.0" text="Add New Ingredient" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="33.0" />
+            <ListView fx:id="listViewIngredients" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="268.0" prefWidth="273.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Rectangle fx:id="rectangleColorList" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="54.0" layoutX="32.0" layoutY="296.0" stroke="BLACK" strokeType="INSIDE" width="54.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="186.8" />
+            <ColorPicker fx:id="colorPickerIngredient" layoutX="164.0" layoutY="457.0" prefHeight="26.0" prefWidth="103.0" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="6.0" />
+            <Spinner fx:id="spinnerIngredientSize" editable="true" layoutX="116.0" layoutY="418.0" AnchorPane.leftAnchor="116.00000000000003" AnchorPane.rightAnchor="7.200000000000017" />
+            <TextField fx:id="tfIngreidentName" layoutX="117.0" layoutY="380.0" promptText="Ingredient Name" AnchorPane.leftAnchor="117.00000000000003" AnchorPane.rightAnchor="6.200000000000017" />
+            <Button fx:id="btnDrawDough" layoutX="118.0" layoutY="294.0" mnemonicParsing="false" onAction="#onClickDrawDough" prefHeight="58.0" prefWidth="146.0" text="Draw Dough" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="9.0" />
+            <Spinner fx:id="spinnerTranslucency" layoutX="14.0" layoutY="457.0" prefHeight="26.0" prefWidth="102.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="156.4" />
+            <Label layoutX="13.0" layoutY="352.0" text="Ingredient's color" />
+            <Label layoutX="19.0" layoutY="422.0" text="Size of ingredient" />
+            <Label layoutX="17.0" layoutY="491.0" text="Color Opacity ^" />
+            <Label layoutX="187.0" layoutY="491.0" text="Set color..." />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
