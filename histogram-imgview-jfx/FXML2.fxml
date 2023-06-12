@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="424.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zaklad2.FXMLDocument2Controller">
+    <center>
+        <SplitPane dividerPositions="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+            <items>
+                <StackPane fx:id="imgViewPane" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: yellow;">
+                    <children>
+                        <ImageView fx:id="imgView" fitHeight="353.0" fitWidth="443.0" pickOnBounds="true" preserveRatio="true" />
+                    </children>
+                </StackPane>
+                <AnchorPane fx:id="histPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-border-width: 1; -fx-border-color: blue;">
+                    <children>
+                        <LineChart fx:id="histogramChart" alternativeRowFillVisible="false" animated="false" horizontalGridLinesVisible="false" legendVisible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="315.0" stylesheets="@chartseries.css" title="Histogram" verticalGridLinesVisible="false" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="81.0" AnchorPane.topAnchor="0.0">
+                            <xAxis>
+                                <NumberAxis autoRanging="false" lowerBound="0" minorTickCount="16" minorTickLength="10.0" minorTickVisible="false" side="BOTTOM" tickLength="6.0" tickUnit="64.0" upperBound="255" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis autoRanging="false" lowerBound="0" minorTickCount="10" minorTickVisible="false" side="LEFT" tickLength="4.0" tickUnit="10" upperBound="100" />
+                            </yAxis>
+                        </LineChart>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </center>
+    <top>
+        <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>
